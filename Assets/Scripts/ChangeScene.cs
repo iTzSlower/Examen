@@ -21,6 +21,7 @@ public class ChangeScene : MonoBehaviour
     public void LoadScene(string name)
     {
         SceneManager.LoadScene(name);
+        Debug.Log("CAMBIO");
     }
 
     public void QuitGame()

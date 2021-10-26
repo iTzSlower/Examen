@@ -8,7 +8,7 @@ public class Selector : MonoBehaviour
     public float scroll;
     public float sensibility;
     public List<Image> Botones = new List<Image>();
-    public List<ChangeScene> Funciones = new List<ChangeScene>();
+    public List<Change> Funciones = new List<Change>();
     void Update()
     {
         Count();
