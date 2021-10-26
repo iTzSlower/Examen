@@ -20,10 +20,10 @@ public class Selector : MonoBehaviour
         float y = Input.GetAxisRaw("Horizontal");
 
         if (y > 0)
-            scroll -= sensibility;
+            scroll += sensibility;
 
         if (y < 0)
-            scroll += sensibility;
+            scroll -= sensibility;
 
         if (scroll > 4)
         {
