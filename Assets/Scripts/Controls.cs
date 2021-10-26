@@ -8,6 +8,7 @@ public class Controls : MonoBehaviour
     public float scroll;
     public float sensibility;
     public List<Image> Botones = new List<Image>();
+    public List<ChangeScene> Funciones = new List<ChangeScene>();
     void Update()
     {
         Count();
@@ -39,6 +40,9 @@ public class Controls : MonoBehaviour
         if(scroll >= 0 && scroll < 1)
         {
             Botones[0].color = new Color(Botones[0].color.r, Botones[0].color.g, Botones[0].color.b, 0.5f);
+            if (Input.GetKeyDown(KeyCode.Space))
+                Funciones[0].Function = true;
+
             Botones[1].color = new Color(Botones[1].color.r, Botones[1].color.g, Botones[1].color.b, 0);
             Botones[2].color = new Color(Botones[2].color.r, Botones[2].color.g, Botones[2].color.b, 0);
             Botones[3].color = new Color(Botones[3].color.r, Botones[3].color.g, Botones[3].color.b, 0);
@@ -46,7 +50,11 @@ public class Controls : MonoBehaviour
         else if (scroll >= 1 && scroll < 2)
         {
             Botones[0].color = new Color(Botones[0].color.r, Botones[0].color.g, Botones[0].color.b, 0);
+
             Botones[1].color = new Color(Botones[1].color.r, Botones[1].color.g, Botones[1].color.b, 0.5f);
+            if (Input.GetKeyDown(KeyCode.Space))
+                Funciones[1].Function = true;
+
             Botones[2].color = new Color(Botones[2].color.r, Botones[2].color.g, Botones[2].color.b, 0);
             Botones[3].color = new Color(Botones[3].color.r, Botones[3].color.g, Botones[3].color.b, 0);
         }
@@ -54,7 +62,11 @@ public class Controls : MonoBehaviour
         {
             Botones[0].color = new Color(Botones[0].color.r, Botones[0].color.g, Botones[0].color.b, 0);
             Botones[1].color = new Color(Botones[1].color.r, Botones[1].color.g, Botones[1].color.b, 0);
+
             Botones[2].color = new Color(Botones[2].color.r, Botones[2].color.g, Botones[2].color.b, 0.5f);
+            if (Input.GetKeyDown(KeyCode.Space))
+                Funciones[2].Function = true;
+
             Botones[3].color = new Color(Botones[3].color.r, Botones[3].color.g, Botones[3].color.b, 0);
         }
         else if (scroll >= 3 && scroll < 4)
@@ -62,7 +74,10 @@ public class Controls : MonoBehaviour
             Botones[0].color = new Color(Botones[0].color.r, Botones[0].color.g, Botones[0].color.b, 0);
             Botones[1].color = new Color(Botones[1].color.r, Botones[1].color.g, Botones[1].color.b, 0);
             Botones[2].color = new Color(Botones[2].color.r, Botones[2].color.g, Botones[2].color.b, 0);
+
             Botones[3].color = new Color(Botones[3].color.r, Botones[3].color.g, Botones[3].color.b, 0.5f);
+            if (Input.GetKeyDown(KeyCode.Space))
+                Funciones[3].Function = true;
         }
     }
 }
